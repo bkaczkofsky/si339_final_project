@@ -24,6 +24,7 @@ h1{
 
 /*Style the images*/
 img{
+	display: grid;
     height: 175px;
 	width:auto;
     border: 3px solid blue;
