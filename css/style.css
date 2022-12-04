@@ -77,7 +77,10 @@ h3 {
 }
 
 iframe, video {
-	margin-left: 30%
+	display: block;
+	margin: auto;
+	width: 560px;
+	height: 315px;
 }
 
 .date {
