@@ -1,3 +1,49 @@
+@media screen and (prefers-reduced-motion: reduce){
+	html{
+		scroll-behavior: auto; /* Removes scroll animation */
+	}
+  
+	.skip a{
+	  -webkit-transition: none; /* sets to default setting */
+	  transition: none;        /* sets to default setting */
+	 }
+  
+	/*Turn off parallax*/
+	header{
+	  background-attachment: initial;
+	}
+  }
+
+  .button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+  }
+
+.skip a{
+	background: white;
+	left: 0;
+	padding: 6px;
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+	z-index: 1;
+  }
+
+  .skip a {
+	position: absolute;
+	top: -40px;
+  }
+  
+  .skip a:focus {
+	position: absolute;
+	top: 20px;
+  }
+
 /*Add padding and margin to space out the page.
 Make the font larger too.*/
 body{
@@ -10,71 +56,204 @@ body{
 h1{
 	font-size: 2em; 
 	font-weight: bold;
-}
-
-.active{
-	background: white;
-    text-transform: uppercase;
 	text-align: center;
+	color: #05445E;
 }
 
-.active a{
-	text-decoration: none;;
+h2 {
+	font-size: 30px;
+	font-weight: normal;
+	text-align: center;
+	color: #05445E;
 }
 
-/*Style the images*/
-img{
-	display: grid;
-    height: 175px;
-	width:auto;
-    border: 3px solid blue;
-    padding: 25px;
-    border-radius: 20px;
-    margin: 10px;
-}
-
-/*Make the h2 heading match h1*/
-h2{
-	font-size: 2em; 
+h3 {
+	font-size: 25px;
 	font-weight: bold;
 }
 
-/*Improve the spacing for paragraphs AND headings*/
-p, h1, h2 {
-    padding: 10px;
+#indexh3 {
+	text-align: center;
 }
 
-/*Add borders around the main components and some
-space too*/
-header, nav, main, footer{
-	border: 3px solid red;
-	margin: 20px 0;
+iframe, video {
+	margin-left: 30%
 }
 
+.date {
+	visibility: hidden;
+	font-size: 15px;
+	padding: 3px;
+}
 
-/*Change the styling for all of the list 
-items in the nav section*/
-nav li{
-	background-color: #ECFF4D;
-	padding:10px;
-	width:25%;
-	border:1px solid black;
-	display: inline-block;
-	width: 20%;
+.active{
+	background: #75E6DA;
+    font-weight: bold;
+}
+
+.active a{
+	text-decoration: none;
 }
 
 /*Added this so the links stay the same color*/
-a:visited{color:#0000FF}
+a:visited{color: #05445E}
 
-/* .skip a{
-	background: white;
-	left: 0;
-	padding: 6px;
-	z-index: 1;
-	position: relative;
-	top: -100px;
-  }
+footer{
+	margin: 20px 0;
+	border: #189AB4 solid 3px;
+}
+
+nav {	
+	border: #189AB4 solid 3px;
+	margin: 20px;
+	border-radius: 20px;
+	background-color: #D4F1F4;
+}
+
+nav ul {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+nav li {
+	margin: 5px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.discography {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	row-gap: 20px;
+	column-gap: 20px;
+	text-align: center;
+}
   
-  .skip a:focus{
-	top: 0px;
-  } */
+  .discography img {
+	width: 35%;
+}
+  
+.album p {
+	align-content: center;
+}
+
+.album {
+	border: #189AB4 solid 3px;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.album:hover, .person:hover {
+	background-color: #05445E;
+	color: #D4F1F4;
+	border: 3px solid #05445E; 
+}
+
+h4 {
+	font-weight: bold;
+}
+
+.position {
+	visibility: visible;
+	font-size: 18px;
+	padding: 3px;
+}
+
+.personnel {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	row-gap: 5px;
+}
+
+.personnel img {
+	width: 200px;
+}
+
+.personnel>* {
+	flex: 1 1 300px;
+}
+
+.person {
+	border: #189AB4 solid 3px;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.person img {
+	border-radius: 5px;
+}
+
+@media screen and (min-width: 600px) {
+	nav ul {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	nav, nav li {
+		margin: 20px 0px;
+	}
+
+	.discography {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	.album {
+		grid-column: span 2;
+	}
+	
+	.album:last-child {
+		grid-column: 2 / span 2;
+	}
+
+	.personnel {
+		column-gap: 5px;
+	}
+
+	.personnel img {
+		width: 200px;
+		height: 150px;
+	}
+
+	.personnel>* {
+		flex: 1 1 300px;
+	}
+
+}
+
+@media screen and (min-width: 900px) {
+
+	.date {
+		visibility: visible;
+	}
+
+	.discography {
+		grid-template-columns: repeat(8, 1fr)
+	}
+
+	.album img {
+		width: 50%;
+	}
+
+	.album {
+		grid-column: span 2;
+	}
+
+	.album:last-child {
+		grid-column: 4 / span 2;
+	}
+
+	personnel {
+		flex-grow: 3;
+	}
+
+	.personnel img {
+		width: 250px;
+		height: 150px;
+	}
+
+	.personnel>* {
+		flex: 1 1 250px;
+	}
+}
