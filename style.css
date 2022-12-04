@@ -1,0 +1,262 @@
+@media screen and (prefers-reduced-motion: reduce){
+	html{
+		scroll-behavior: auto; /* Removes scroll animation */
+	}
+  
+	.skip a{
+	  -webkit-transition: none; /* sets to default setting */
+	  transition: none;        /* sets to default setting */
+	 }
+  
+	/*Turn off parallax*/
+	header{
+	  background-attachment: initial;
+	}
+  }
+
+  .button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+  }
+
+.skip a{
+	background: white;
+	left: 0;
+	padding: 6px;
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+	z-index: 1;
+  }
+
+  .skip a {
+	position: absolute;
+	top: -40px;
+  }
+  
+  .skip a:focus {
+	position: absolute;
+	top: 20px;
+  }
+
+/*Add padding and margin to space out the page.
+Make the font larger too.*/
+body{
+	margin:1%;
+	padding:1%;
+	font-size:150%;
+}
+
+/*Make the h1 heading bigger with a bold font*/
+h1{
+	font-size: 2em; 
+	font-weight: bold;
+	text-align: center;
+	color: #05445E;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: normal;
+	text-align: center;
+	color: #05445E;
+}
+
+h3 {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+#indexh3 {
+	text-align: center;
+}
+
+iframe, video {
+	display: block;
+	margin: auto;
+	width: 560px;
+	height: 315px;
+}
+
+.date {
+	visibility: hidden;
+	font-size: 15px;
+	padding: 3px;
+}
+
+.active{
+	background: #75E6DA;
+    font-weight: bold;
+}
+
+.active a{
+	text-decoration: none;
+}
+
+/*Added this so the links stay the same color*/
+a:visited{color: #05445E}
+
+footer{
+	margin: 20px 0;
+	border: #189AB4 solid 3px;
+}
+
+nav {	
+	border: #189AB4 solid 3px;
+	margin: 20px;
+	border-radius: 20px;
+	background-color: #D4F1F4;
+}
+
+nav ul {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+nav li {
+	margin: 5px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.discography {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	row-gap: 20px;
+	column-gap: 20px;
+	text-align: center;
+}
+  
+  .discography img {
+	width: 35%;
+}
+  
+.album p {
+	align-content: center;
+}
+
+.album {
+	border: #189AB4 solid 3px;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.album:hover, .person:hover {
+	background-color: #05445E;
+	color: #D4F1F4;
+	border: 3px solid #05445E; 
+}
+
+h4 {
+	font-weight: bold;
+}
+
+.position {
+	visibility: visible;
+	font-size: 18px;
+	padding: 3px;
+}
+
+.personnel {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	row-gap: 5px;
+}
+
+.personnel img {
+	width: 200px;
+}
+
+.personnel>* {
+	flex: 1 1 300px;
+}
+
+.person {
+	border: #189AB4 solid 3px;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.person img {
+	border-radius: 5px;
+}
+
+@media screen and (min-width: 600px) {
+	nav ul {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	nav, nav li {
+		margin: 20px 0px;
+	}
+
+	.discography {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	.album {
+		grid-column: span 2;
+	}
+	
+	.album:last-child {
+		grid-column: 2 / span 2;
+	}
+
+	.personnel {
+		column-gap: 5px;
+	}
+
+	.personnel img {
+		width: 200px;
+		height: 150px;
+	}
+
+	.personnel>* {
+		flex: 1 1 300px;
+	}
+
+}
+
+@media screen and (min-width: 900px) {
+
+	.date {
+		visibility: visible;
+	}
+
+	.discography {
+		grid-template-columns: repeat(8, 1fr)
+	}
+
+	.album img {
+		width: 50%;
+	}
+
+	.album {
+		grid-column: span 2;
+	}
+
+	.album:last-child {
+		grid-column: 4 / span 2;
+	}
+
+	personnel {
+		flex-grow: 3;
+	}
+
+	.personnel img {
+		width: 250px;
+		height: 150px;
+	}
+
+	.personnel>* {
+		flex: 1 1 250px;
+	}
+}
