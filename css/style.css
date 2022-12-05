@@ -159,7 +159,7 @@ h4 {
 }
 
 .position {
-	visibility: visible;
+	visibility: hidden;
 	font-size: 18px;
 	padding: 3px;
 }
@@ -190,6 +190,11 @@ h4 {
 }
 
 @media screen and (min-width: 600px) {
+
+	.position {
+		visibility: visible;
+	}
+
 	nav ul {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
@@ -215,12 +220,12 @@ h4 {
 	}
 
 	.personnel img {
-		width: 200px;
+		width: 250px;
 		height: 150px;
 	}
 
 	.personnel>* {
-		flex: 1 1 300px;
+		flex: 1 1 200px;
 	}
 
 }
@@ -247,13 +252,8 @@ h4 {
 		grid-column: 4 / span 2;
 	}
 
-	personnel {
+	.personnel {
 		flex-grow: 3;
-	}
-
-	.personnel img {
-		width: 250px;
-		height: 150px;
 	}
 
 	.personnel>* {
